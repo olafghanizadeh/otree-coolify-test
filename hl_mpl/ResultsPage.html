@@ -1,0 +1,93 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+{{ trans 'Round results' }}
+{% endblock %}
+
+{% block content %}
+
+<div class="card">
+    <div class="card-header">
+        <h3>{{ trans 'Round results' }}</h3>
+    </div>
+    <div class="card-body">
+        {{if lang == 'en'}}
+        Your winning ticket was chosen from <strong>{{ trans 'Choice' }}</strong> where you picked <strong>{{ trans
+            'Option' }} {{
+            player.option_chosen_letter }}</strong>. The computer made a random draw and your score from this round was
+        <strong>{{ player.payoff }}</strong>.
+
+        {{ if player.round_number == 1}}
+        <p>In the following rounds, the possible gains may be very large, or small and the difference of potential
+            winnings between participants may be large due to the random nature of the lotteries.</p>
+        <p>We understand that some participants may wish to not continue, therefore, from now on you will always have
+            the option to withdraw between the rounds and leave what you have earned up until that point, you will still
+            be part of the final lottery</p>
+        <p><strong>If you wish to continue from this round to the next, you must give up the lottery tickets earned in
+                the previous round. Keep in mind that the following rounds may include the possibility of higher
+                winnings.</strong></p>
+        <p>However, we guarantee that you will not end up with zero tickets at the end of the experiment.</p>
+        {{endif}}
+
+        {{ if player.round_number != 1}}
+        <br>
+        <p>Remember that you can withdraw and leave with your current winnings.</p>
+        {{endif}}
+
+        {{endif}}
+        {{if lang == 'pt'}}
+        Foi aleatoriamente selecionada para atribuição do prémio <strong>{{ trans 'Choice' }} {{ index_to_pay
+            }}</strong>, na qual a sua escolha foi a
+        <strong>{{ trans 'Option' }} {{
+            player.option_chosen_letter }}</strong>. O computador fez um sorteio entre os dois prémios possíveis desta
+        Opção e seleccionou o seu prémio para esta ronda:
+        <strong>{{ player.payoff }}</strong> de lotaria.
+        {{if hypo}}
+        <strong>
+            {{if lang == 'pt'}}
+            Como esta ronda foi hipotética, estes bilhetes não serão contabilizados na sua pontuação final.
+            {{endif}}
+            {{if lang == 'en'}}
+            As this round involved hypothetical winnings, these lottery tickets will not be counted towards your final
+            score.
+            {{endif}}
+        </strong>
+        {{endif}}
+
+        {{ if player.round_number == 1}}
+        <p>Tem agora a possibilidade de terminar ou continuar. Se optar por terminar, fica com os bilhetes de lotaria
+            que acaba de ganhar, que lhe permitirão participar no sorteio final. Se optar por continuar, renuncia aos
+            bilhetes que ganhou, mas tem a possibilidade de participar em novas rondas. </p>
+
+        <p>
+            <strong>Os prémios, expressos em número de bilhetes de lotaria, de cada nova ronda poderão ser mais ou menos
+                elevados do que os prémios da ronda que acaba de completar. Mas garantimos que não é possível terminar a
+                experiência sem nenhum bilhete de lotaria.</strong>
+        </p>
+
+        {{endif}}
+
+        {{ if player.round_number != 1}}
+        <br>
+        <br>
+        <p>Lembre-se que pode retirar-se e sair com os seus ganhos atuais.</p>
+        {{endif}}
+
+        {{endif}}
+
+    </div>
+</div>
+
+<div class="d-grid gap-2 d-md-flex justify-content-between mt-4">
+    <p>
+        <button class="btn btn-danger" name="withdraw" value="True">{{ trans 'Withdraw'}}</button>
+    </p>
+    <p><button class="btn">
+            Continuar
+        </button>
+    </p>
+</div>
+
+
+{% endblock %}

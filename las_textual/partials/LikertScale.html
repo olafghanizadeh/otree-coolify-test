@@ -1,0 +1,12 @@
+<div class="flex flex-col gap-12">
+    <h5 class="text-5xl leading-[80px]">{{label || field.label}}</h5>
+    {{for choice in field}}
+    <label for="{{choice.id}}" class="text-5xl cursor-pointer form-check flex gap-12">
+        <span>{{choice._value}}</span>
+        {{choice}}
+        {{if field_labels}}
+        <span class="cursor-pointer"> {{choice.label}} </span>
+        {{endif}}
+    </label>
+    {{endfor}}
+</div>

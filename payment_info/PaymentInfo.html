@@ -1,0 +1,20 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block content %}
+
+<div class="text-center">
+    <div class="text-center text-white mt-5">
+        <div class="text-center space-y-12">
+            <h5 class="text-center text-5xl">Faça um screenshot desta página para resgatar seu prêmio, em caso de
+                ganhar.</h5>
+            <h5 class="text-center text-4xl">ID do Participante</h5>
+            <p class="uppercase text-8xl">{{participant_id}}</p>
+            <h5 class="text-center text-4xl">Código de resgate</h5>
+            <p class="uppercase text-8xl">{{redemption_code}}</p>
+        </div>
+    </div>
+</div>
+
+
+{{ endblock }}

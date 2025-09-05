@@ -1,0 +1,17 @@
+<div class="card h-100 ring-1 ring-white p-4">
+    <h4 class="card-header text-4xl">Opção {{option}}</h4>
+    <div class="card-body text-2xl">
+        <p>
+            {{if lang == 'en'}}
+            {{ p }} probability of winning {{lottery_hi}} and {{ inverse_p }} of winning {{lottery_lo}}
+            {{endif}}
+            {{if lang == 'pt'}}
+            {{ p }} de probabilidade de ganhar {{lottery_hi}} e {{ inverse_p }} de probabilidade de ganhar
+            {{lottery_lo}}
+            {{endif}}
+        </p>
+        <div class="form_field d-flex justify-content-center">
+            <input type="radio" name="{{ form_field }}" value="{{value}}" required>
+        </div>
+    </div>
+</div>

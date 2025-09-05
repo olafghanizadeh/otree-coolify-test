@@ -1,0 +1,330 @@
+# Translations template for PROJECT.
+# Copyright (C) 2021 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2021-09-28 11:50+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: hl_mpl/DecisionPage.html:8
+msgid "Make your choices"
+msgstr ""
+
+#: hl_mpl/DecisionPage.html:28
+msgid "Hypothetical winnings"
+msgstr ""
+
+#: hl_mpl/DecisionPage.html:29
+msgid ""
+"This round involves hypothetical rewards, meaning that the results of "
+"this round will not count towards your final score"
+msgstr ""
+
+#: hl_mpl/DecisionPage.html:35 hl_mpl/ResultsPage.html:16
+#: hl_mpl/ResultsPage.html:40
+msgid "Choice"
+msgstr ""
+
+#: hl_mpl/DecisionPage.html:39 hl_mpl/DecisionPage.html:57
+#: hl_mpl/ResultsPage.html:42
+msgid "Option"
+msgstr ""
+
+#: hl_mpl/DecisionPage.html:78 hl_mpl/ResultsPage.html:86
+#: hl_mpl_instructions/Instructions.html:45 survey/Demographics.html:12
+#: survey/Instructions.html:27 survey/RiskSurvey.html:28
+#: survey/SocioEconomic.html:12
+msgid "Continue"
+msgstr ""
+
+#: hl_mpl/ResultsPage.html:5 hl_mpl/ResultsPage.html:12
+msgid "Round results"
+msgstr ""
+
+#: hl_mpl/ResultsPage.html:83
+msgid "Withdraw"
+msgstr ""
+
+#: hl_mpl_instructions/Instructions.html:1 survey/Instructions.html:1
+msgid "Instructions"
+msgstr ""
+
+#: payment_info/PaymentInfo.html:1
+msgid "Thank you for your participation!"
+msgstr ""
+
+#: payment_info/PaymentInfo.html:6
+msgid "Score"
+msgstr ""
+
+#: payment_info/PaymentInfo.html:9
+msgid ""
+"Below you will find the total amount of lottery tickets you gained in the"
+" previous rounds."
+msgstr ""
+
+#: payment_info/PaymentInfo.html:11
+msgid "Lottery tickets"
+msgstr ""
+
+#: payment_info/PaymentInfo.html:18
+msgid "Important information"
+msgstr ""
+
+#: payment_info/PaymentInfo.html:48
+msgid "Prize redemption"
+msgstr ""
+
+#: payment_info/PaymentInfo.html:51
+msgid "Participant ID"
+msgstr ""
+
+#: payment_info/PaymentInfo.html:53
+msgid "Redemption Code"
+msgstr ""
+
+#: survey/Demographics.html:1
+msgid "Demographics"
+msgstr ""
+
+#: survey/Demographics.html:5 survey/SocioEconomic.html:5
+msgid "Please answer the following questions."
+msgstr ""
+
+#: survey/RiskSurvey.html:1
+msgid "Risks"
+msgstr ""
+
+#: survey/RiskSurvey.html:16
+msgid "Have you invested in any of the following investment products?"
+msgstr ""
+
+#: survey/SocioEconomic.html:1
+msgid "Socioeconomic status"
+msgstr ""
+
+#: survey/__init__.py:35
+msgid "Commercial Paper"
+msgstr ""
+
+#: survey/__init__.py:36
+msgid "Bitcoin, ICOs or other cryptocurrency related investment"
+msgstr ""
+
+#: survey/__init__.py:37
+msgid "Crowdfunding"
+msgstr ""
+
+#: survey/__init__.py:38
+msgid "Corporate Bonds"
+msgstr ""
+
+#: survey/__init__.py:39
+msgid ""
+"Complex Financial Products (derivatives, options or other leveraged "
+"products)"
+msgstr ""
+
+#: survey/__init__.py:40
+msgid "Treasury Bonds"
+msgstr ""
+
+#: survey/__init__.py:41
+msgid "Investment Funds"
+msgstr ""
+
+#: survey/__init__.py:42
+msgid "Stocks"
+msgstr ""
+
+#: survey/__init__.py:43
+msgid "Retirement savings"
+msgstr ""
+
+#: survey/__init__.py:65
+msgid "Apple AirPods"
+msgstr ""
+
+#: survey/__init__.py:65
+msgid "Samsung Galaxy Buds Pro"
+msgstr ""
+
+#: survey/__init__.py:66
+msgid ""
+"In case you win one of the bluetooth headphones, which one would you "
+"prefer?"
+msgstr ""
+
+#: survey/__init__.py:68
+msgid "What year were you born?"
+msgstr ""
+
+#: survey/__init__.py:70
+msgid "Male"
+msgstr ""
+
+#: survey/__init__.py:70
+msgid "Female"
+msgstr ""
+
+#: survey/__init__.py:70
+msgid "Other/Prefer not to disclose"
+msgstr ""
+
+#: survey/__init__.py:71
+msgid "What is your gender?"
+msgstr ""
+
+#: survey/__init__.py:76
+msgid "In which region do you have your fiscal residence?"
+msgstr ""
+
+#: survey/__init__.py:80
+msgid "Please indicate your highest level of completed education"
+msgstr ""
+
+#: survey/__init__.py:82
+msgid "Primary education"
+msgstr ""
+
+#: survey/__init__.py:83
+msgid "Lower secondary education"
+msgstr ""
+
+#: survey/__init__.py:84
+msgid "Upper secondary education"
+msgstr ""
+
+#: survey/__init__.py:85
+msgid "Undergraduate/bachelor's degree"
+msgstr ""
+
+#: survey/__init__.py:86
+msgid "Master, MBA or Doctorate degree"
+msgstr ""
+
+#: survey/__init__.py:91
+msgid "Please indicate your work situation"
+msgstr ""
+
+#: survey/__init__.py:93
+msgid "Unemployed"
+msgstr ""
+
+#: survey/__init__.py:94
+msgid "Self employed"
+msgstr ""
+
+#: survey/__init__.py:95
+msgid "Employed"
+msgstr ""
+
+#: survey/__init__.py:96
+msgid "Retired"
+msgstr ""
+
+#: survey/__init__.py:97
+msgid "Student"
+msgstr ""
+
+#: survey/__init__.py:98
+msgid "Other"
+msgstr ""
+
+#: survey/__init__.py:103
+msgid "Please indicate your monthly household income"
+msgstr ""
+
+#: survey/__init__.py:105
+msgid "Up to 500€ per month"
+msgstr ""
+
+#: survey/__init__.py:106
+msgid "Between 501€ and 1000€ per month"
+msgstr ""
+
+#: survey/__init__.py:107
+msgid "Between 1001€ and 2500€ per month"
+msgstr ""
+
+#: survey/__init__.py:108
+msgid "Between 2510€ and 4000€ per month"
+msgstr ""
+
+#: survey/__init__.py:109
+msgid "More than 4000€ per month"
+msgstr ""
+
+#: survey/__init__.py:113 survey/__init__.py:134
+msgid "No"
+msgstr ""
+
+#: survey/__init__.py:113 survey/__init__.py:134
+msgid "Yes"
+msgstr ""
+
+#: survey/__init__.py:114
+msgid "Have you ever studied economics?"
+msgstr ""
+
+#: survey/__init__.py:118
+msgid "If you are currently studying in ISEG – What is your field of study?"
+msgstr ""
+
+#: survey/__init__.py:120
+msgid "Economics"
+msgstr ""
+
+#: survey/__init__.py:121
+msgid "Finance"
+msgstr ""
+
+#: survey/__init__.py:122
+msgid "Management"
+msgstr ""
+
+#: survey/__init__.py:123
+msgid "Mathematics"
+msgstr ""
+
+#: survey/__init__.py:128
+msgid "Very risk averse"
+msgstr ""
+
+#: survey/__init__.py:128
+msgid "Risk averse"
+msgstr ""
+
+#: survey/__init__.py:128
+msgid "Risk neutral"
+msgstr ""
+
+#: survey/__init__.py:129
+msgid "Risk lover"
+msgstr ""
+
+#: survey/__init__.py:129
+msgid "Risk lover (more)"
+msgstr ""
+
+#: survey/__init__.py:131
+msgid "What is your own perception of your willingness to take risks?"
+msgstr ""
+
+#: survey/__init__.py:135
+msgid ""
+"Have you ever gambled online through online casinos or sport betting "
+"services such as Betclic?"
+msgstr ""
+

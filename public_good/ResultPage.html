@@ -1,0 +1,14 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block content %}
+
+<p class="text-center text-4xl">O seu rendimento é: {{player.payoff | c}}</p>
+
+<form class="otree-form grid grid-cols-1 justify-items-center mt-12" method="post" role="form" id="form"
+    autocomplete="off">
+    <button class="btn btn-primary btn-lg btn-block mt-12">
+        Continuar
+    </button>
+</form>
+{%endblock %}

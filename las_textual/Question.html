@@ -1,0 +1,21 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block content %}
+
+<div class="flex flex-col gap-[12em]">
+    <form class="otree-form grid grid-cols-1 justify-items-center mt-12" method="post" role="form" id="form"
+        autocomplete="off">
+        {{ for field in form }}
+        <div class="flex flex-col gap-12">
+            {{ include "las_textual/partials/LikertScale.html" with field=field & warning=False & label=field.label
+            & field_labels=True }}
+        </div>
+        {{endfor}}
+
+        <button class="btn btn-primary btn-lg btn-block mt-12">
+            Continuar
+        </button>
+    </form>
+</div>
+{% endblock %}

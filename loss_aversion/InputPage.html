@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block content %}
+
+<p class="text-3xl text-center">
+  Imagine um jogo em que tem 50% de probabilidade de perder 25 euros e 50% de probabilidade de ganhar um prémio. Qual é
+  o valor do prémio que faria com que estivesse disposto a jogar este jogo?
+<form class="otree-form grid grid-cols-1 justify-items-center mt-12" method="post" role="form" id="form"
+  autocomplete="off">
+
+  <input type="number" placeholder="X" name="input" required inputmode="numeric" pattern="[0-9]*"
+    class="input input-bordered input-lg w-full bg-black ring-2 ring-white block [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" />
+  <button class="btn btn-primary btn-lg btn-block mt-12">
+    Continuar
+  </button>
+</form>
+{%endblock %}

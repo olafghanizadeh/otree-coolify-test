@@ -1,0 +1,60 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block content %}
+
+
+
+<div class="text-center space-y-4 text-lg">
+    <p class="text-center">
+        Imagine que está a jogar aleatoriamente com outro estudante. É-lhe atribuído aleatoriamente o papel de
+        “Proponente”
+        e ao outro estudante é atribuído o papel de “Respondente”.
+    </p>
+
+
+    <p class="text-3xl">
+        Voce foi aleatoriamente atribuído o papel de <strong>>Proponente</strong>.
+    </p>
+
+
+    <p>
+        Imagine que tem {{ initial_endowment | c }}. Deve agora decidir quanto dinheiro vai partilhar com o Respondente,
+        qualquer valor entre {{0 | c }} e {{ initial_endowment | c }}.
+    </p>
+
+    <p>
+        O Respondente pode aceitar ou rejeitar a sua proposta.
+    </p>
+
+    <p>
+        Se a proposta for rejeitada, ambos ficam sem nada. Caso contrário, o dinheiro é dividido da forma que decidiu.
+    </p>
+
+    <p>
+        Por exemplo, suponha que oferece {{35 | c}} e fica com {{65 | c}}. Se a proposta for aceite, o Proponente fica
+        com
+        {{65 | c}} e o Respondente recebe {{35 | c}}. Se a proposta for rejeitada, tanto você como o Respondente ficam
+        sem
+        nada.
+    </p>
+</div>
+
+<div class="text-center text-2xl">
+    Por favor, escreva quanto, dos seus {{initial_endowment | c}}, vai oferecer ao outro estudante
+</div>
+
+<form class="otree-form grid grid-cols-1 justify-items-center mt-12" method="post" role="form" id="form"
+    autocomplete="off">
+
+    <input type="number" inputmode="numeric" pattern="[0-9]*" placeholder="X" name="proposer_offer" min="0"
+        max="{{Constants.INITIAL_ENDOWMENT}}" required
+        class="input input-bordered input-xl w-full bg-black ring-2 ring-white block [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" />
+
+    <p class="mt-4">{{ formfield_errors 'proposer_offer' }}</p>
+
+    <button class="btn btn-primary btn-xl btn-block mt-12">
+        Continuar
+    </button>
+</form>
+{%endblock %}

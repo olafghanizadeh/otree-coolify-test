@@ -1,0 +1,64 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+
+{% block content %}
+
+
+{% if is_winner %}
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        var duration = 15 * 1000;
+        var animationEnd = Date.now() + duration;
+        var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+        function randomInRange(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+        var interval = setInterval(function () {
+            var timeLeft = animationEnd - Date.now();
+
+            if (timeLeft <= 0) {
+                return clearInterval(interval);
+            }
+
+            var particleCount = 50 * (timeLeft / duration);
+            // since particles fall down, start a bit higher than random
+            window.confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
+            window.confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+        }, 250);
+
+    });
+</script>
+{% endif %}
+
+
+<div class="text-center">
+
+
+    {% if is_winner %}
+    <div class="text-center" id="demo"></div>
+
+    <div class="text-center text-white mt-5">
+        <div class="text-center space-y-12">
+            <p class="text-center text-4xl"> Parabéns! </p>
+            <h5 class="text-center text-4xl"> Voce é um dos vencedores!
+            </h5>
+            <p class="text-center text-4xl">Não fecha esta página. </p>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="text-center text-white mt-5">
+        <div class="text-center space-y-12">
+            <h5 class="text-center text-4xl">ID do Participante</h5>
+            <p class="uppercase text-9xl">{{participant_id}}</p>
+        </div>
+    </div>
+</div>
+
+
+{{ endblock }}

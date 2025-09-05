@@ -1,0 +1,37 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+{% block app_scripts %}
+<script src="{% static 'cardSelector.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+<style>
+    .card {
+        cursor: pointer;
+
+    }
+
+    input[type="radio"] {
+        visibility: hidden;
+    }
+</style>
+
+<form class="otree-form" method="post" role="form" id="form" autocomplete="off">
+
+    {% for index,form_field,p,inverse_p in choices %}
+    <div>
+        <h3 class="text-3xl my-12 font-extrabold">Escolha {{ index }}</h3>
+        <div class="grid grid-cols-2 gap-16">
+            {{include 'hl_mpl/partials/ChoiceCard.html' with option="A" & lottery_hi = lottery_a_hi & lottery_lo =
+            lottery_a_lo & value = 0}}
+            {{include 'hl_mpl/partials/ChoiceCard.html' with option="B" & lottery_hi = lottery_b_hi & lottery_lo =
+            lottery_b_lo & value = 1}}
+        </div>
+    </div>
+    {% endfor %}
+    <button class="btn btn-primary btn-lg btn-block mt-12">
+        Continuar
+    </button>
+</form>
+{% endblock %}

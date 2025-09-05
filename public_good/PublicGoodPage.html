@@ -1,0 +1,75 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+
+{% block content %}
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+<div class="space-y-4">
+    <p>
+        Imagine que faz parte de um grupo de quatro estudantes. Não sabe quem são os outros três membros do grupo. Todos
+        recebem
+        as mesmas instruções, que são as seguintes:
+    </p>
+
+    <p>
+        Tem {{initial_endowment | c}} e deve decidir quanto contribuir para um projeto; pode contribuir com qualquer
+        valor
+        entre
+        {{0 | c}} e {{initial_endowment | c}}. Fica com o montante restante para si.
+    </p>
+
+
+    <p>
+        O seu rendimento será o montante que manteve para si mais 0,4 vezes o total contribuído para o projeto. Ou seja:
+
+        \[
+        \text{Rendimento} = ({{ initial_endowment|c }} - \text{montante que contribui}) + {{ Constants.MULTIPLIER }}
+        \times
+        \text{contribuição total para o projeto}
+        \]
+    </p>
+
+    <p>
+        Por exemplo, se a contribuição total for de {{60|c}}, então cada membro do grupo recebe:
+    </p>
+
+    \[
+    {{60|c}} \times {{ Constants.MULTIPLIER }} = {{24|c}}
+    \]
+
+    <p>
+        do projeto. Se tiver contribuído {{15|c}}, então o seu rendimento será:
+    </p>
+
+    \[
+    ({{ initial_endowment|c }} - {{15|c}}) + {{24|c}} = {{29|c}}
+    \]
+
+    <p>
+        Se, por outro lado, tiver contribuído {{5|c}} para o projeto, o seu rendimento será:
+    </p>
+
+    \[
+    ({{ initial_endowment|c }} - {{5|c}}) + {{24|c}} = {{39|c}}
+    \]
+
+
+    <div class="text-center text-2xl">
+        Por favor, escreva quanto, dos seus {{initial_endowment | c}}, vai contribuir para o projeto:
+    </div>
+</div>
+
+<form class="otree-form grid grid-cols-1 justify-items-center mt-12" method="post" role="form" id="form"
+    autocomplete="off">
+
+    <input type="number" inputmode="numeric" pattern="[0-9]*" placeholder="X" name="contribution" min="0"
+        max="{{Constants.INITIAL_ENDOWMENT}}" required
+        class="input input-bordered input-lg w-full bg-black ring-2 ring-white block [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" />
+    <p class="mt-4">{{ formfield_errors 'contribution' }}</p>
+    <button class="btn btn-primary btn-lg btn-block mt-12">
+        Continuar
+    </button>
+</form>
+{%endblock %}

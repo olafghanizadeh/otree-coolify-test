@@ -1,0 +1,62 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+
+{% block content %}
+<form class="otree-form grid grid-cols-1 mt-12 w-full" method="post" role="form" id="form" autocomplete="off">
+  <p class="text-2xl">
+    Por favor, responda às seguintes perguntas.
+  </p>
+  <div class="flex flex-col gap-12">
+    <label class="form-control w-full space-y-4">
+      <div class="label">
+        <span class="label-text text-xl">{{form.age.label}}</span>
+      </div>
+      <input required maxlength="4" id="{{form.age.id}}" name="{{form.age.name}}" type="number" inputmode="numeric"
+        placeholder="AAAA"
+        class="input input-bordered input-lg w-full bg-black ring-2 ring-white block [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" />
+    </label>
+
+    <label class="form-control w-full space-y-4">
+      <div class="label">
+        <span class="label-text text-xl">{{form.programme.label}}</span>
+      </div>
+      <select name="programme" class="select select-bordered select-lg w-full bg-black text-white ring-2 ring-white">
+        <option disabled selected></option>
+        {{for choice in form.programme}}
+        {{choice}}
+        {{endfor}}
+      </select>
+    </label>
+
+    <label class="form-control w-full space-y-4">
+      <div class="label">
+        <span class="label-text text-xl">{{form.gender.label}}</span>
+      </div>
+      <select required name="gender"
+        class="select select-bordered select-lg w-full bg-black text-white ring-2 ring-white">
+        <option disabled selected></option>
+        {{for choice in form.gender}}
+        {{choice}}
+        {{endfor}}
+      </select>
+    </label>
+
+    <label class="form-control w-full space-y-4">
+      <div class="label">
+        <span class="label-text text-xl">{{form.postal.label}}</span>
+      </div>
+      <input required maxlength="8" type="text" id="postal" name="postal" pattern="\d{4}-\d{3}"
+        class="input input-bordered input-lg w-full bg-black ring-2 ring-white block [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" />
+      <div class="label">
+        <span class="label-text-alt ">Formato: XXXX-XXX</span>
+      </div>
+    </label>
+
+
+    <button class="btn btn-primary btn-lg btn-block mt-12">
+      Continuar
+    </button>
+  </div>
+</form>
+{{ endblock }}
