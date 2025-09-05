@@ -2,7 +2,7 @@ from os import environ
 
 SESSION_CONFIGS = [
     dict(
-        name='otree-coolify-test',
+        name='otree_coolify_test',
         display_name='Coolify Test',
         num_demo_participants=2,
         app_sequence=['survey', 'payment_info'],
